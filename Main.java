@@ -8,12 +8,13 @@ import java.io.FileNotFoundException;
 
 public class Main{
     // create an instance to read the token
-
+    public static JDA jda;
+    // initialize the token reader.
+    static Token token = new Token();
     // Main method
     public static void main(String[] args) throws LoginException{
-        Token token = new Token();
-        // Initialize the API to the discord bot in the channel.
-        JDA jda = JDABuilder.createDefault(token.getToken()).build();
 
+        // Initialize the API to the discord bot in the channel.
+        jda = JDABuilder.createDefault(token.getToken()).build();
     }
 }
