@@ -15,20 +15,32 @@ public class Token {
         token = "";
     }
 
-    // return's the token's value when called.
-    public String getToken()  {
+    // This private method will take care of File I/O for the token.
+    private String readToken(){
+        String temp = "";
         try {
             File token_file = new File("token.txt");
             Scanner read = new Scanner(token_file);
             while(read.hasNextLine()){
-                token = read.nextLine();
+                temp = read.nextLine();
             }
             read.close();
-            return token;
+            return temp;
         }catch (FileNotFoundException e){
             e.printStackTrace();
             return null;
         }
+    }
+
+    // This private method simply sets the private token to the value from the file
+    private void setToken(String str){
+        this.token = str;
+    }
+
+    // return's the token's value when called.
+    public String getToken()  {
+       setToken(readToken());
+       return this.token;
     }
 
     public static void main(String[] args) throws FileNotFoundException {

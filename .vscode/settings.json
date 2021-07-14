@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/andresreyes/Desktop/Projects/JDA-4.3.0_277-withDependencies.jar"
+    ]
+}
