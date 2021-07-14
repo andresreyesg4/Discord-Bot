@@ -13,7 +13,6 @@ public class Main{
     static Token token = new Token();
     // Main method
     public static void main(String[] args) throws LoginException{
-
         // Initialize the API to the discord bot in the channel.
         jda = JDABuilder.createDefault(token.getToken()).build();
     }
