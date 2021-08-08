@@ -20,7 +20,7 @@ import java.util.*;
 
 public class Youtube extends ListenerAdapter {
 
-    private static String PROPERTIES_FILENAME = "youtube.properties";
+    private static String PROPERTIES_FILENAME = "tokens.properties";
     private static Properties properties = new Properties();
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
 
